@@ -4,7 +4,7 @@ INFILES = 	main.cpp newZombie.cpp Zombie.cpp randomChump.cpp
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = Zombie
+NAME = BraiiiiiiinnnzzzZ
 
 all: $(NAME)
 

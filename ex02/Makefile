@@ -1,10 +1,10 @@
 C++ = c++
 C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-INFILES = 	main.cpp Zombie.cpp zombieHorde.cpp
+INFILES = 	main.cpp
 
 OBJFILES = $(INFILES:.cpp=.o)
 
-NAME = Moar_brainz!
+NAME = HI_THIS_IS_BRAIN
 
 all: $(NAME)
 

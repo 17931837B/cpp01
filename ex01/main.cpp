@@ -7,7 +7,7 @@ int	main(void)
 	Zombie		*zom;
 	int			i;
 
-	N = 10;
+	N = 1;
 	name = "Foo";
 	zom = zombieHorde(N, name);
 	i = 0;

@@ -3,6 +3,7 @@
 HumanB::HumanB(std::string name) : name_p(name), weapon_p(NULL)
 {
 }
+
 void HumanB::attack()
 {
 	if (weapon_p)

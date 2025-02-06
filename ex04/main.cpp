@@ -36,6 +36,7 @@ int	main(int argc, char **argv)
 	if (!fout)
 	{
 		std::cout << "Error open file\n";
+		fin.close();
 		return (1);
 	}
 	while (1)

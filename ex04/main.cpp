@@ -13,43 +13,28 @@
 #include <iostream>
 #include <string>
 
-// std::string	ft_replace(std::string line, const std::string& from, const std::string& to)
-// {
-// 	size_t	pos;
-	
-// 	pos = line.find(from);
-// 	while (pos != std::string::npos)
-// 	{
-// 		line.replace(pos, from.length(), to);
-// 		pos = line.find(from, pos + to.length());
-// 	}
-// 	return (line);
-// }
+std::string ft_replace(std::string line, const std::string& from, const std::string& to)
+{
+	std::string result;
+	size_t pos = 0;
+	size_t from_len = from.length();
 
-#include <string>
-
-std::string ft_replace(std::string line, const std::string& from, const std::string& to) {
-    std::string result;
-    size_t pos = 0;
-    size_t from_len = from.length();
-
-    while (pos < line.length()) {
-        size_t found_pos = line.find(from, pos);
-        if (found_pos == std::string::npos) {
-            // fromが見つからなかった場合、残りの文字列をresultに追加して終了
-            result += line.substr(pos);
-            break;
-        } else {
-            // fromが見つかった場合
-            // fromより前の部分をresultに追加
-            result += line.substr(pos, found_pos - pos);
-            // toをresultに追加
-            result += to;
-            // posを更新
-            pos = found_pos + from_len;
-        }
-    }
-    return result;
+	while (pos < line.length())
+	{	
+		size_t found_pos = line.find(from, pos);
+		if (found_pos == std::string::npos)
+		{
+			result += line.substr(pos);
+			break;
+		}
+		else
+		{
+			result += line.substr(pos, found_pos - pos);
+			result += to;
+			pos = found_pos + from_len;
+		}
+	}
+	return (result);
 }
 
 int	main(int argc, char **argv)

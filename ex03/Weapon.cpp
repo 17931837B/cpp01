@@ -7,12 +7,16 @@ Weapon::Weapon()
 
 Weapon::Weapon(std::string type)
 {
+	type_p = "";
 	setType(type);
 }
 
 void Weapon::setType(std::string type)
 {
-	type_p = type;
+	if (type.empty())
+		type_p = "soul";
+	else
+		type_p = type;
 }
 
 const std::string &Weapon::getType()

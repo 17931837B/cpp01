@@ -10,7 +10,10 @@ all: $(NAME)
 
 
 $(NAME):$(OBJFILES)
-	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME) 
+	$(C++) $(C++_FLAGS) $(OBJFILES) -o $(NAME)
+
+%.o: %.cpp
+	$(C++) $(C++_FLAGS) -c $< -o $@ 
 
 clean:
 	rm -f $(OBJFILES)

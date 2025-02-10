@@ -22,7 +22,6 @@ class Harl
 		void	info(void);
 		void	warning(void);
 		void	error(void);
-		typedef void (Harl::*ComplainFunc)(void);
 	public:
 		void complain(std::string level);
 };
